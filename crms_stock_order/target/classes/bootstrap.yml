@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: local
+  name: crms-stock-order
+  datasource:
+    url: jdbc:mysql://sh-cdb-7zz58ey2.sql.tencentcdb.com:63574/stock_order?useSSL=false&serverTimezone=UTC
+    username: root
+    password: a123635528!
+    driver-class-name: com.mysql.cj.jdbc.Driver
