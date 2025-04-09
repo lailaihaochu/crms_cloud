@@ -1,0 +1,24 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /crms
+spring:
+  application:
+    name: gateway-eureka
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled:  false
+          lowerCaseServiceId: true
+      routes:
+        - id: add_request_header_route
+          uri: lb://SERVICE-XXX   #服务地址
+          filters:
+            - StripPrefix=1
+          predicates:
+            - Path=/crms/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/,http://localhost:8083/eureka/
