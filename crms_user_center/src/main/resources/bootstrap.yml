@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: @profileActive@
+  application:
+    name: shiphub-authorziation
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 139.198.180.204:8848
+        namespace: 4112a8ff-c7fd-4035-a6a0-bd290b359745
+        group: SHIPHUB_GROUP
+      config:
+        server-addr: 139.198.180.204:8848
+        namespace: 4112a8ff-c7fd-4035-a6a0-bd290b359745
+        group: SHIPHUB_GROUP
+        file-extension: yml
+#        username: nacos
+#        password: nacos
+#      discovery:
+#        server-addr: 139.198.180.204:8848
+#        group: DEFAULT_GROUP
+#      config:
+#        server-addr: 139.198.180.204:8848
+#        group: DEFAULT_GROUP
+#        file-extension: yml
+#    config:
+#      enabled: false
