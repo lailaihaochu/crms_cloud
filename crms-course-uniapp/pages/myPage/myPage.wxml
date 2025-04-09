@@ -1,0 +1,35 @@
+<view class="my-page">
+  <view class="user-info">
+    <image src="{{user.avatar}}" mode="aspectFit"></image>
+    <text class="user-name">{{user.name}}</text>
+    <button bindtap="syncWechatInfo">同步微信信息</button>
+  </view>
+  <view class="orders">
+    <text class="orders-title">订单</text>
+    <view class="order-status">
+      <text bindtap="viewOrders" data-status="待付款">待付款</text>
+      <text bindtap="viewOrders" data-status="待发货">待发货</text>
+      <text bindtap="viewOrders" data-status="待收货">待收货</text>
+      <text bindtap="viewOrders" data-status="待评价">待评价</text>
+      <text bindtap="viewOrders" data-status="退款/售后">退款/售后</text>
+    </view>
+    <button bindtap="viewAllOrders">查看全部订单</button>
+    <order-list orders="{{orders}}"></order-list>
+  </view>
+  <view class="learning-center">
+    <text class="learning-title">学习中心</text>
+    <text>累计学习 {{learningMinutes}} 分钟</text>
+  </view>
+  <view class="sales-workbench">
+    <text class="sales-title">销售员工作台</text>
+  </view>
+  <view class="account-settings">
+    <text class="account-title">账号设置</text>
+  </view>
+  <view class="achievements">
+    <text class="achievements-title">我的成就</text>
+  </view>
+  <view class="gift-records">
+    <text class="gift-title">赠送记录</text>
+  </view>
+</view>

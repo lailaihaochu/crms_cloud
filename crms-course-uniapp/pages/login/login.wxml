@@ -1,0 +1,5 @@
+<view class="login">
+  <text class="login-title">微信登录</text>
+  <button bindtap="wechatLogin">使用微信登录</button>
+  <text wx:if="{{errorMessage}}" class="error-message">{{errorMessage}}</text>
+</view>

@@ -1,0 +1,35 @@
+{
+    "pages": [
+        {
+            "path": "pages/login/login",
+            "style": {
+                "navigationBarTitleText": "登录"
+            }
+        },
+        {
+            "path": "pages/home/home",
+            "style": {
+                "navigationBarTitleText": "首页"
+            }
+        },
+        {
+            "path": "pages/courseDetail/courseDetail",
+            "style": {
+                "navigationBarTitleText": "课程详情"
+            }
+        },
+        {
+            "path": "pages/myPage/myPage",
+            "style": {
+                "navigationBarTitleText": "我的页面"
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "学习资料小程序",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "uniIdRouter": {}
+}

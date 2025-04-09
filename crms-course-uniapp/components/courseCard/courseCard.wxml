@@ -1,0 +1,9 @@
+<view class="course-card">
+  <image src="{{course.coverImage}}" mode="aspectFit"></image>
+  <view class="course-info">
+    <text class="course-title">{{course.title}}</text>
+    <text class="course-desc">{{course.description}}</text>
+    <text class="course-price">价格: ￥{{course.price}}</text>
+  </view>
+  <button bindtap="goToCourseDetail">查看详情</button>
+</view>

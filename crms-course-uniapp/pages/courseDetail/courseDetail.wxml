@@ -1,0 +1,21 @@
+<!-- pages/courseDetail/courseDetail.wxml -->
+<view class="course-details">
+    <view class="course-card">
+        <!-- 头部区域 -->
+        <view class="header">
+            <text class="title">{{course.title}}</text>
+        </view>
+
+        <!-- 描述区域 -->
+        <view class="description">
+            <text class="details">{{course.description}}</text>
+        </view>
+    </view>
+
+    <!-- 下载链接区域 -->
+    <view class="download-links">
+        <block wx:for="{{downloadLinks}}" wx:key="index">
+            <navigator class="download-link" url="{{item}}" target="_blank">{{item}}</navigator>
+        </block>
+    </view>
+</view>

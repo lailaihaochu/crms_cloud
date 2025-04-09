@@ -1,0 +1,48 @@
+<!-- pages/home/home.wxml -->
+<view class="home">
+    <!-- 头部导航 -->
+    <view class="header">
+        <text class="title">购买资料</text>
+    </view>
+
+    <!-- 主体内容 -->
+    <view class="main-layout">
+        <!-- 左侧导航栏 -->
+        <view class="category-sidebar">
+            <view class="category-item {{selectedCategory && selectedCategory.id === item.id ? 'selected' : ''}}"
+                  wx:for="{{categories}}" wx:key="id" bindtap="filterCourses" data-category="{{item}}">
+                <text class="category-text">{{item.category_name}}</text>
+            </view>
+        </view>
+
+        <!-- 右侧课程列表 -->
+        <view class="course-content" wx:if="{{selectedCategory}}">
+            <view class="course-list" wx:if="{{courses.length}}">
+                <view class="course-card" wx:for="{{courses}}" wx:key="id" course="{{item}}" bindtap="goToCourseDetails" data-course="{{item}}">
+                    <view class="course-info">
+                        <text class="course-title">{{item.title}}</text>
+                        <text class="course-description">{{item.description}}</text>
+                    </view>
+                    <view class="price-section">
+                        <text class="course-price">¥{{item.price}}</text>
+                    </view>
+                    <button class="purchase-button">购买课程</button>
+        
+                </view>
+            </view>
+            <view class="loading-indicator" wx:else>加载中...</view>
+        </view>
+        <view class="loading-indicator" wx:else>请选择一个类别</view>
+    </view>
+
+    <!-- 支付信息展示区域 -->
+    <view class="payment-info" wx:if="{{paymentInfo}}">
+        <text>支付信息: {{paymentInfo}}</text>
+        <button class="cancel-order-button" bindtap="cancelOrder">取消订单</button>
+    </view>
+
+    <!-- 订单取消信息展示区域 -->
+    <view class="order-cancel-info" wx:if="{{orderCancelInfo}}">
+        <text>订单取消信息: {{orderCancelInfo}}</text>
+    </view>
+</view>

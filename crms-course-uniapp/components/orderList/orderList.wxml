@@ -1,0 +1,8 @@
+<view class="order-list">
+  <view wx:for="{{orders}}" wx:key="id" class="order-item">
+    <text>课程名称: {{item.course.title}}</text>
+    <text>订单状态: {{item.status}}</text>
+    <button wx:if="{{item.status === '待付款'}}" bindtap="payOrder" data-order-id="{{item.id}}">付款</button>
+    <button wx:if="{{item.status === '待收货'}}" bindtap="confirmReceipt" data-order-id="{{item.id}}">确认收货</button>
+  </view>
+</view>

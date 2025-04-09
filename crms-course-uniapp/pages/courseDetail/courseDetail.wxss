@@ -1,0 +1,47 @@
+/* pages/courseDetail/courseDetail.wxss */
+
+.course-details {
+    padding: 20px;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #f9f9f9, #eaeaea); /* ½¥±ä±³¾° */
+    background-size: cover;
+}
+
+.header {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px; /* Smaller font size for the description */
+}
+
+.download-links {
+    border: 1px solid #ddd; /* Light border color */
+    padding: 10px;
+}
+
+.download-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #007aff;
+    text-decoration: none;
+}
+
+.download-link:active {
+    text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+.login {
+  padding: 20px;
+  text-align: center;
+}
+.login-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

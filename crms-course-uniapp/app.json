@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/courseDetail/courseDetail",
+    "pages/myPage/myPage",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "学习资料小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#007aff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+       "iconPath": "static/tab-home.png",
+       "selectedIconPath": "static/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/myPage/myPage",
+        "text": "我的",
+        "iconPath": "/static/tab-my.png",
+       	"selectedIconPath": "static/tab-my-current.png"
+      }
+    ]
+  }
+}
