@@ -1,0 +1,21 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8081/eureka,http://localhost:8083/eureka
+    register-with-eureka: false   #启动服务注册
+    fetch-registry: false
+  server:
+    enable-self-preservation: true
+  instance:
+    hostname: my_eureka
+    ip-address: 192.168.3.1
+    lease-renewal-interval-in-seconds: 30   #定义服务续约任务（心跳）的调用间隔，单位：秒
+    lease-expiration-duration-in-seconds: 90  #定义服务失效的时间，单位：秒
+server:
+  port: 8081
+spring:
+  application:
+    name: crms_cloud_eureka
+  servlet:
+    context-path: /crms_cloud_eureka
